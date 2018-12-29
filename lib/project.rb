@@ -9,13 +9,11 @@ class Project
   def add_backer(backer) 
      
     @backers << backer
-    backer.add_backer << self
-   
     
- 
-
-    # self.project = backer 
-    # project.back_project(self)
+    
+    
+    # self.title = backer 
+    # title.back_project(self)
   
   
   end 

@@ -11,13 +11,13 @@ end
 def back_project(project)
   
   @backed_projects << project
-  project.back_project << self
-    
-   
+ 
+  #binding.pry
+  self.name = project
+  name.add_backer(self)
   
-  # self.backer = project
-  # backer.add_backer(self)
-  
-  
+  #consider next self.name usage here and self.title usage in Project
 end 
 end 
+
+	
