@@ -1,5 +1,5 @@
 class Project 
-  attr_accessor :backers, :title, :project 
+  attr_accessor :backers, :title
   
   def initialize(title) 
     @title = title
@@ -11,10 +11,13 @@ class Project
     @backers << backer
     
     
-    
+    #causes inf loop
     # self.title = backer 
     # title.back_project(self)
   
+    backer.backed_projects << self
   
-  end 
+  end
+  
+  
 end 

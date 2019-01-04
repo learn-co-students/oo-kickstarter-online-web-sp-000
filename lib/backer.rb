@@ -1,11 +1,12 @@
 require 'pry'
 class Backer 
-  attr_accessor :backed_projects, :name, :backer
+  attr_accessor :backed_projects, :name
  
 def initialize(name)
   @name = name
-  #@backer = backer
-  @backed_projects = [] 
+  
+  @backed_projects = []
+  
 end
 
 def back_project(project)
@@ -16,8 +17,11 @@ def back_project(project)
   self.name = project
   name.add_backer(self)
   
-  #consider next self.name usage here and self.title usage in Project
 end 
+ 
+
+
+
 end 
 
 	
