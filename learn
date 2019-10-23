@@ -1,0 +1,59 @@
+
+Backer - ::new
+  takes a name on initialization, accessible through an attribute reader
+  initializes with a @backed_projects attribute, an empty array
+
+Project - ::new
+  takes a title on initialization, accessible through an attribute reader
+  initializes with a @backers attribute, an empty array
+
+Backer - #back_project
+  accepts a Project as an argument and stores it in a backed_projects array (FAILED - 1)
+
+Failures:
+
+  1) Backer - #back_project accepts a Project as an argument and stores it in a backed_projects array
+     Failure/Error: backer.back_project(self)
+
+     SystemStackError:
+       stack level too deep
+     # ./lib/project.rb:10:in `add_backer'
+     # ./lib/project.rb:10:in `add_backer'
+     # ./lib/backer.rb:10:in `back_project'
+     # ./lib/project.rb:10:in `add_backer'
+     # ./lib/backer.rb:10:in `back_project'
+     # ./lib/project.rb:10:in `add_backer'
+     # ./lib/backer.rb:10:in `back_project'
+     # ./spec/kickstarter_spec.rb:33:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00352 seconds (files took 0.11136 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/kickstarter_spec.rb:27 # Backer - #back_project accepts a Project as an argument and stores it in a backed_projects array
+
+
+Backer - ::new
+  takes a name on initialization, accessible through an attribute reader
+  initializes with a @backed_projects attribute, an empty array
+
+Project - ::new
+  takes a title on initialization, accessible through an attribute reader
+  initializes with a @backers attribute, an empty array
+
+Backer - #back_project
+  accepts a Project as an argument and stores it in a backed_projects array
+
+Project - #add_backer
+  accepts a Backer as an argument and stores it in a backers array
+
+Backer - More Advanced #back_project
+  also adds the backer to the project's backers array
+
+Project - More Advanced #add_backer
+  also adds the project to the backer's backed_projects array
+
+Finished in 0.00425 seconds (files took 0.11374 seconds to load)
+8 examples, 0 failures
+

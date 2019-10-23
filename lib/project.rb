@@ -5,9 +5,9 @@ class Project
     @backers = []
   end
   
-  def add_backer(backer)
+  def add_backer(backer, also_back =  true)
     @backers << backer
-    backer.back_project(self)
+    backer.back_project(self, false)  if also_back
   end
 
 end
