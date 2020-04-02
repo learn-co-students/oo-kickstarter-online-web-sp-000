@@ -9,12 +9,11 @@ class Backer
   @backed_projects = []
   end
 
-## Whenever back_project() is called to update @backed_projects, the project should also update its @backers list.
-
   def back_project(project)
     # binding.pry
     @backed_projects << project
-    Project.add_backer(backer)
+    project.add_backer(self)
   end
+  
 
 end
