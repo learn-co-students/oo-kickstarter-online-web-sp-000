@@ -37,7 +37,7 @@ of this lab, though, following the specs in order will eventually lead you to
 the correct relationships between your classes.
 
 - When a `Backer` instance is initialized, it should be initialized with a
-  `@backed_projects` variable set to an empty array. Instances of the `Backer`
+  `@` variable set to an empty array. Instances of the `Backer`
   class should have an `attr_reader` for backed projects. This way, a backer can
   report on the projects they back.
 
@@ -68,6 +68,6 @@ if one side is updated, the other side should be as well.
 
 You may realize that this set up does not maintain a single source of truth. The
 trouble here is that our usual way of maintaining a "has-many" / "belongs-to"
-relationship won't work here. We'll address this is upcoming lessons, 
+relationship won't work here. We'll address this is upcoming lessons,
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/oo-kickstarter' title='Object Oriented Kickstarter'>Object Oriented Kickstarter</a> on Learn.co and start learning to code for free.</p>
